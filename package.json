@@ -1,0 +1,11 @@
+{
+  "name": "frontend-2026-html",
+  "version": "1.0.0",
+  "description": "HTML/CSS/JavaScript learning repository",
+  "scripts": {
+    "start": "serve . -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
