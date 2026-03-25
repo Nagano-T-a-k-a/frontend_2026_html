@@ -8,7 +8,7 @@ function addItem(text) {
 function runLoop() {
   const list = document.getElementById("list");
 
-  // リストをリセット（前の結果を削除）
+  // リセット
   list.innerHTML = "";
 
   /**
@@ -17,13 +17,11 @@ function runLoop() {
    *
    * 要件:
    * - for文を使う
-   * - 1から5まで繰り返す
-   * - ループの中で addItem(i) を呼ぶ
+   * - 1から10まで繰り返す
+   * - 偶数のみ表示する
    *
-   * 例:
-   * addItem(1)
-   * addItem(2)
-   * ...
+   * ヒント:
+   * - if を使う
    * =========================================
    */
 }

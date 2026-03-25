@@ -8,7 +8,7 @@ function addItem(text) {
 function runLoop() {
   const list = document.getElementById("list");
 
-  // リストをリセット（前の結果を削除）
+  // リセット
   list.innerHTML = "";
 
   /**
@@ -16,14 +16,12 @@ function runLoop() {
    * ここにコードを書いてください
    *
    * 要件:
-   * - for文を使う
-   * - 1から5まで繰り返す
-   * - ループの中で addItem(i) を呼ぶ
+   * - for文を使う（1〜20）
+   * - 条件分岐を使う（if）
+   * - FizzBuzzルールに従う
    *
-   * 例:
-   * addItem(1)
-   * addItem(2)
-   * ...
+   * ヒント:
+   * - %（余り）を使う
    * =========================================
    */
 }
