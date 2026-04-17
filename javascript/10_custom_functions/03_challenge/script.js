@@ -1,6 +1,6 @@
 function addItem(text) {
-  const list = document.getElementById("cart-list");
-  const li = document.createElement("li");
+  const list = document.getElementById('cart-list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -26,13 +26,13 @@ function addItem(text) {
  */
 
 function runChallenge() {
-  const list = document.getElementById("cart-list");
-  list.innerHTML = "";
+  const list = document.getElementById('cart-list');
+  list.innerHTML = '';
 
   const prices = [1200, 800, 3500, 650];
   const total = calculateTotal(prices);
   const discounted = applyDiscount(total, 10);
 
-  addItem("合計: " + total + "円");
-  addItem("割引後 (10%引き): " + discounted + "円");
+  addItem('合計: ' + total + '円');
+  addItem('割引後 (10%引き): ' + discounted + '円');
 }

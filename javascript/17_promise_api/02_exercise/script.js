@@ -2,7 +2,7 @@
 
 function fetchName() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve("田中 花子"), 600);
+    setTimeout(() => resolve('田中 花子'), 600);
   });
 }
 
@@ -14,17 +14,17 @@ function fetchAge() {
 
 function fetchCity() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve("東京"), 500);
+    setTimeout(() => resolve('東京'), 500);
   });
 }
 
 // ─── ユーティリティ（変更不要） ──────────────────────────────
 
-const list = document.getElementById("result-list");
+const list = document.getElementById('result-list');
 
 function addItem(text) {
-  list.innerHTML = list.innerHTML !== "" ? list.innerHTML : "";
-  const li = document.createElement("li");
+  list.innerHTML = list.innerHTML !== '' ? list.innerHTML : '';
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -38,6 +38,6 @@ function addItem(text) {
 //   4. .catch(err => addItem("エラー: " + err.message)) でエラーを表示
 
 function runAll() {
-  list.innerHTML = "";
+  list.innerHTML = '';
   // ここにコードを書いてください
 }

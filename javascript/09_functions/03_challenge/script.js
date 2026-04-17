@@ -1,6 +1,6 @@
 function addGrade(text) {
-  const list = document.getElementById("grade-list");
-  const li = document.createElement("li");
+  const list = document.getElementById('grade-list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -19,12 +19,12 @@ function addGrade(text) {
  */
 
 function runChallenge() {
-  const list = document.getElementById("grade-list");
-  list.innerHTML = "";
+  const list = document.getElementById('grade-list');
+  list.innerHTML = '';
 
   const scores = [95, 82, 67, 55, 40];
   for (let i = 0; i < scores.length; i++) {
     const grade = calculateGrade(scores[i]);
-    addGrade("スコア: " + scores[i] + " → " + grade);
+    addGrade('スコア: ' + scores[i] + ' → ' + grade);
   }
 }

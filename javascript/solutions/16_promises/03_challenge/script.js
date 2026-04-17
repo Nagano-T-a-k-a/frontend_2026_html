@@ -3,10 +3,10 @@
 function authenticate(username, password) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (username === "admin" && password === "1234") {
-        resolve({ token: "abc-xyz-123" });
+      if (username === 'admin' && password === '1234') {
+        resolve({ token: 'abc-xyz-123' });
       } else {
-        reject(new Error("認証失敗：ユーザー名またはパスワードが間違っています"));
+        reject(new Error('認証失敗：ユーザー名またはパスワードが間違っています'));
       }
     }, 700);
   });
@@ -15,10 +15,10 @@ function authenticate(username, password) {
 function fetchProfile(token) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (token === "abc-xyz-123") {
-        resolve({ name: "田中 太郎", role: "admin", lastLogin: "2025-06-01" });
+      if (token === 'abc-xyz-123') {
+        resolve({ name: '田中 太郎', role: 'admin', lastLogin: '2025-06-01' });
       } else {
-        reject(new Error("プロフィール取得失敗：無効なトークン"));
+        reject(new Error('プロフィール取得失敗：無効なトークン'));
       }
     }, 600);
   });
@@ -26,10 +26,10 @@ function fetchProfile(token) {
 
 // ─── ユーティリティ（変更不要） ──────────────────────────────
 
-const logEl = document.getElementById("log");
+const logEl = document.getElementById('log');
 
 function addLog(message) {
-  const li = document.createElement("li");
+  const li = document.createElement('li');
   li.textContent = message;
   logEl.appendChild(li);
 }
@@ -44,21 +44,21 @@ function addLog(message) {
 //   5. catch (e) で addLog(e.message) を使いエラーを表示
 
 async function login(username, password) {
-  logEl.innerHTML = "";
+  logEl.innerHTML = '';
 
   try {
     // authenticate が成功すると token を含むオブジェクトが返る
     const { token } = await authenticate(username, password);
-    addLog("認証成功…トークン取得");
+    addLog('認証成功…トークン取得');
 
     // token を使ってプロフィールを取得
     const profile = await fetchProfile(token);
-    addLog("ログイン成功！");
-    addLog("名前: " + profile.name);
-    addLog("ロール: " + profile.role);
-    addLog("最終ログイン: " + profile.lastLogin);
+    addLog('ログイン成功！');
+    addLog('名前: ' + profile.name);
+    addLog('ロール: ' + profile.role);
+    addLog('最終ログイン: ' + profile.lastLogin);
   } catch (e) {
     // authenticate または fetchProfile のエラーをまとめて処理
-    addLog("❌ " + e.message);
+    addLog('❌ ' + e.message);
   }
 }

@@ -1,6 +1,6 @@
 function addItem(text) {
-  const list = document.getElementById("list");
-  const li = document.createElement("li");
+  const list = document.getElementById('list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -21,12 +21,12 @@ function addItem(text) {
  */
 
 function run() {
-  const list = document.getElementById("list");
-  list.innerHTML = "";
+  const list = document.getElementById('list');
+  list.innerHTML = '';
 
-  addItem("タイトル: " + book.title);
-  addItem("著者: " + book.author);
-  addItem("出版年: " + book.year);
-  addItem("ページ数: " + book.pages);
+  addItem('タイトル: ' + book.title);
+  addItem('著者: ' + book.author);
+  addItem('出版年: ' + book.year);
+  addItem('ページ数: ' + book.pages);
   addItem(book.describe());
 }

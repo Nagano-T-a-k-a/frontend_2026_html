@@ -1,6 +1,6 @@
 function addLog(text) {
-  const log = document.getElementById("log");
-  const li = document.createElement("li");
+  const log = document.getElementById('log');
+  const li = document.createElement('li');
   li.textContent = text;
   log.appendChild(li);
 }
@@ -9,18 +9,18 @@ function addLog(text) {
 function mockFetch(url) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      if (url.includes("error")) {
-        resolve({ status: "error", data: null });
+      if (url.includes('error')) {
+        resolve({ status: 'error', data: null });
       } else {
-        resolve({ status: "ok", data: ["商品A", "商品B", "商品C"] });
+        resolve({ status: 'ok', data: ['商品A', '商品B', '商品C'] });
       }
     }, 800);
   });
 }
 
 function run(url) {
-  const log = document.getElementById("log");
-  log.innerHTML = "";
+  const log = document.getElementById('log');
+  log.innerHTML = '';
   addLog(`リクエスト中... (${url})`);
 
   /**

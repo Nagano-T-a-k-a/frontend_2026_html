@@ -6,9 +6,9 @@ const employeesJson = `[
 ]`;
 
 function runChallenge() {
-  const cardsContainer = document.getElementById("cards");
-  const allSkillsDisplay = document.getElementById("allSkills");
-  cardsContainer.innerHTML = "";
+  const cardsContainer = document.getElementById('cards');
+  const allSkillsDisplay = document.getElementById('allSkills');
+  cardsContainer.innerHTML = '';
 
   // JSONを配列に変換
   const employees = JSON.parse(employeesJson);
@@ -20,17 +20,17 @@ function runChallenge() {
     const emp = employees[i];
 
     // 社員カード要素を作成
-    const card = document.createElement("div");
-    card.className = "employee-card";
+    const card = document.createElement('div');
+    card.className = 'employee-card';
 
-    const nameEl = document.createElement("h3");
+    const nameEl = document.createElement('h3');
     nameEl.textContent = emp.name;
 
-    const deptEl = document.createElement("p");
-    deptEl.textContent = "部署: " + emp.department;
+    const deptEl = document.createElement('p');
+    deptEl.textContent = '部署: ' + emp.department;
 
-    const skillEl = document.createElement("p");
-    skillEl.textContent = "スキル: " + emp.skills.join(", ");
+    const skillEl = document.createElement('p');
+    skillEl.textContent = 'スキル: ' + emp.skills.join(', ');
 
     card.appendChild(nameEl);
     card.appendChild(deptEl);
@@ -45,5 +45,5 @@ function runChallenge() {
 
   // Set で重複を除去し、JSONに変換して表示
   const unique = [...new Set(allSkills)];
-  allSkillsDisplay.textContent = "全スキル（重複なし）: " + JSON.stringify(unique);
+  allSkillsDisplay.textContent = '全スキル（重複なし）: ' + JSON.stringify(unique);
 }

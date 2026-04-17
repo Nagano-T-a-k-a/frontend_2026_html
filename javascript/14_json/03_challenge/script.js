@@ -6,9 +6,9 @@ const employeesJson = `[
 ]`;
 
 function runChallenge() {
-  const cardsContainer = document.getElementById("cards");
-  const allSkillsDisplay = document.getElementById("allSkills");
-  cardsContainer.innerHTML = "";
+  const cardsContainer = document.getElementById('cards');
+  const allSkillsDisplay = document.getElementById('allSkills');
+  cardsContainer.innerHTML = '';
 
   /**
    * =============================================

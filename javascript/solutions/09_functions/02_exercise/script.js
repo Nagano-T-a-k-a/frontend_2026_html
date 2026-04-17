@@ -1,6 +1,6 @@
 function addItem(text) {
-  const list = document.getElementById("list");
-  const li = document.createElement("li");
+  const list = document.getElementById('list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -11,8 +11,8 @@ function add(a, b) {
 }
 
 function run() {
-  const list = document.getElementById("list");
-  list.innerHTML = "";
+  const list = document.getElementById('list');
+  list.innerHTML = '';
 
   const result = add(3, 5);
   addItem(result);

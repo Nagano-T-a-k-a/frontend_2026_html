@@ -1,6 +1,6 @@
 function addLog(text) {
-  const log = document.getElementById("log");
-  const li = document.createElement("li");
+  const log = document.getElementById('log');
+  const li = document.createElement('li');
   li.textContent = text;
   log.appendChild(li);
 }
@@ -8,14 +8,14 @@ function addLog(text) {
 // 500ms後にユーザー情報を callback に渡す
 function fetchUser(id, callback) {
   setTimeout(() => {
-    callback({ id: id, name: "田中" });
+    callback({ id: id, name: '田中' });
   }, 500);
 }
 
 // 700ms後に注文一覧を callback に渡す
 function fetchOrders(user, callback) {
   setTimeout(() => {
-    callback({ user: user, orders: ["注文A", "注文B"] });
+    callback({ user: user, orders: ['注文A', '注文B'] });
   }, 700);
 }
 
@@ -27,8 +27,8 @@ function calcTotal(data, callback) {
 }
 
 function runChallenge() {
-  const log = document.getElementById("log");
-  log.innerHTML = "";
+  const log = document.getElementById('log');
+  log.innerHTML = '';
 
   const start = Date.now();
 
@@ -43,7 +43,7 @@ function runChallenge() {
     addLog(`[${elapsed()}] ユーザー取得: ${user.name}`);
 
     fetchOrders(user, (data) => {
-      addLog(`[${elapsed()}] 注文取得: ${data.orders.join(", ")}`);
+      addLog(`[${elapsed()}] 注文取得: ${data.orders.join(', ')}`);
 
       calcTotal(data, (total) => {
         addLog(`[${elapsed()}] 合計: ${total}件`);

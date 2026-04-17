@@ -1,6 +1,6 @@
 function addResult(text) {
-  const list = document.getElementById("result-list");
-  const li = document.createElement("li");
+  const list = document.getElementById('result-list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -26,14 +26,14 @@ function addResult(text) {
  */
 
 function runChallenge() {
-  const list = document.getElementById("result-list");
-  list.innerHTML = "";
+  const list = document.getElementById('result-list');
+  list.innerHTML = '';
 
   const people = [
-    { name: "田中さん", weight: 55, height: 1.70 },
-    { name: "佐藤さん", weight: 80, height: 1.65 },
-    { name: "山田さん", weight: 48, height: 1.60 },
-    { name: "鈴木さん", weight: 100, height: 1.75 },
+    { name: '田中さん', weight: 55, height: 1.70 },
+    { name: '佐藤さん', weight: 80, height: 1.65 },
+    { name: '山田さん', weight: 48, height: 1.60 },
+    { name: '鈴木さん', weight: 100, height: 1.75 },
   ];
 
   for (let i = 0; i < people.length; i++) {

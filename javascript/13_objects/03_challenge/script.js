@@ -1,6 +1,6 @@
 function addResult(text) {
-  const list = document.getElementById("result-list");
-  const li = document.createElement("li");
+  const list = document.getElementById('result-list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -25,12 +25,12 @@ function addResult(text) {
  */
 
 function runChallenge() {
-  const list = document.getElementById("result-list");
-  list.innerHTML = "";
+  const list = document.getElementById('result-list');
+  list.innerHTML = '';
 
-  const emp1 = new Employee("田中", "営業", 350000);
-  const emp2 = new Employee("佐藤", "開発", 420000);
-  const emp3 = new Employee("山田", "人事", 300000);
+  const emp1 = new Employee('田中', '営業', 350000);
+  const emp2 = new Employee('佐藤', '開発', 420000);
+  const emp3 = new Employee('山田', '人事', 300000);
 
   const employees = [emp1, emp2, emp3];
 

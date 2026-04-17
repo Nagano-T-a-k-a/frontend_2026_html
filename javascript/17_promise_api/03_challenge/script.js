@@ -1,11 +1,11 @@
 // ─── 模擬API（変更不要） ─────────────────────────────────────
 
 const requests = [
-  new Promise((resolve) => setTimeout(() => resolve("ニュースA取得"), 300)),
-  new Promise((_, reject) => setTimeout(() => reject(new Error("ニュースBサーバーエラー")), 400)),
-  new Promise((resolve) => setTimeout(() => resolve("ニュースC取得"), 250)),
-  new Promise((_, reject) => setTimeout(() => reject(new Error("ニュースD接続タイムアウト")), 350)),
-  new Promise((resolve) => setTimeout(() => resolve("ニュースE取得"), 500)),
+  new Promise((resolve) => setTimeout(() => resolve('ニュースA取得'), 300)),
+  new Promise((_, reject) => setTimeout(() => reject(new Error('ニュースBサーバーエラー')), 400)),
+  new Promise((resolve) => setTimeout(() => resolve('ニュースC取得'), 250)),
+  new Promise((_, reject) => setTimeout(() => reject(new Error('ニュースD接続タイムアウト')), 350)),
+  new Promise((resolve) => setTimeout(() => resolve('ニュースE取得'), 500)),
 ];
 
 function fetchData() {
@@ -18,13 +18,13 @@ function fetchData() {
 // ─── ユーティリティ（変更不要） ──────────────────────────────
 
 function addLog(ulId, message) {
-  const li = document.createElement("li");
+  const li = document.createElement('li');
   li.textContent = message;
   document.getElementById(ulId).appendChild(li);
 }
 
 function clearLog(ulId) {
-  document.getElementById(ulId).innerHTML = "";
+  document.getElementById(ulId).innerHTML = '';
 }
 
 // ─── ここからコードを書いてください ─────────────────────────
@@ -35,7 +35,7 @@ function clearLog(ulId) {
 // 最後に: "成功X件 / 失敗Y件"
 
 function runSettled() {
-  clearLog("log-settled");
+  clearLog('log-settled');
   // ここにコードを書いてください
 }
 
@@ -53,6 +53,6 @@ function timeout(ms) {
 // タイムアウトなら "⏱️ " + err.message を表示
 
 function runRace() {
-  clearLog("log-race");
+  clearLog('log-race');
   // ここにコードを書いてください
 }

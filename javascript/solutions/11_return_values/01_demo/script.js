@@ -1,6 +1,6 @@
 function addItem(text) {
-  const list = document.getElementById("list");
-  const li = document.createElement("li");
+  const list = document.getElementById('list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -26,11 +26,11 @@ function factorial(num) {
 }
 
 function runDemo() {
-  const list = document.getElementById("list");
-  list.innerHTML = "";
-  const num = parseFloat(document.getElementById("numInput").value);
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+  const num = parseFloat(document.getElementById('numInput').value);
   if (isNaN(num)) {
-    addItem("数値を入力してください。");
+    addItem('数値を入力してください。');
     return;
   }
   addItem(`${num} の2乗: ${squared(num)}`);

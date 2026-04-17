@@ -1,15 +1,15 @@
 function addItem(text) {
-  const list = document.getElementById("list");
-  const li = document.createElement("li");
+  const list = document.getElementById('list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
 
 function runLoop() {
-  const list = document.getElementById("list");
+  const list = document.getElementById('list');
 
   // リセット
-  list.innerHTML = "";
+  list.innerHTML = '';
 
   /**
    * =========================================

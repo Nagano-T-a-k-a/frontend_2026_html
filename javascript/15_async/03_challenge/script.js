@@ -1,6 +1,6 @@
 function addLog(text) {
-  const log = document.getElementById("log");
-  const li = document.createElement("li");
+  const log = document.getElementById('log');
+  const li = document.createElement('li');
   li.textContent = text;
   log.appendChild(li);
 }
@@ -28,8 +28,8 @@ function addLog(text) {
  */
 
 function runChallenge() {
-  const log = document.getElementById("log");
-  log.innerHTML = "";
+  const log = document.getElementById('log');
+  log.innerHTML = '';
 
   const start = Date.now();
 

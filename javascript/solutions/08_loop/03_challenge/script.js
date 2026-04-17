@@ -1,13 +1,13 @@
 function addPrime(text) {
-  const list = document.getElementById("prime-list");
-  const li = document.createElement("li");
+  const list = document.getElementById('prime-list');
+  const li = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
 
 function runBonus() {
-  const list = document.getElementById("prime-list");
-  list.innerHTML = "";
+  const list = document.getElementById('prime-list');
+  list.innerHTML = '';
 
   // 外側ループ: 2〜50の各数字を候補にする
   for (let i = 2; i <= 50; i++) {
