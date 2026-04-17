@@ -21,7 +21,9 @@ function runAsync() {
   setTimeout(() => {
     addLog('3. 非同期: setTimeout コールバック（1秒後）');
   }, 1000);
-  addLog('2. 非同期: setTimeoutをセット後、すぐ次の行へ → これが先に実行される');
+  addLog(
+    '2. 非同期: setTimeoutをセット後、すぐ次の行へ → これが先に実行される',
+  );
 }
 
 function fetchData(callback) {
@@ -36,7 +38,10 @@ function runCallback() {
   log.innerHTML = '';
   addLog('データ取得中...', 'cbLog');
   fetchData((result) => {
-    addLog(`受け取ったデータ: ユーザー=${result.user}, スコア=${result.score}`, 'cbLog');
+    addLog(
+      `受け取ったデータ: ユーザー=${result.user}, スコア=${result.score}`,
+      'cbLog',
+    );
   });
   addLog('fetchData() を呼んだ直後（まだ結果は来ていない）', 'cbLog');
 }

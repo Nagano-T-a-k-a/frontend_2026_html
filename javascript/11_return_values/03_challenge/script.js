@@ -30,9 +30,9 @@ function runChallenge() {
   list.innerHTML = '';
 
   const people = [
-    { name: '田中さん', weight: 55, height: 1.70 },
+    { name: '田中さん', weight: 55, height: 1.7 },
     { name: '佐藤さん', weight: 80, height: 1.65 },
-    { name: '山田さん', weight: 48, height: 1.60 },
+    { name: '山田さん', weight: 48, height: 1.6 },
     { name: '鈴木さん', weight: 100, height: 1.75 },
   ];
 

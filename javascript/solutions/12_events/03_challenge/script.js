@@ -3,7 +3,7 @@ document.getElementById('myForm').addEventListener('submit', (e) => {
   // ブラウザデフォルトのページ遷移を常に防ぐ
   e.preventDefault();
 
-  const name  = document.getElementById('nameInput').value;
+  const name = document.getElementById('nameInput').value;
   const email = document.getElementById('emailInput').value;
   const error = document.getElementById('error');
 

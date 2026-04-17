@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -17,18 +17,27 @@
       <section>
         <h2>問題：遅延メッセージ</h2>
         <ol>
-          <li>関数 <code>delayMessage(message, delay, callback)</code> を作る</li>
-          <li><code>delay</code> ミリ秒後に <code>callback(message)</code> を呼ぶ（<code>setTimeout</code> を使う）</li>
-          <li>「実行」ボタンを押すと、以下の3つのメッセージが順番に表示されること:
+          <li>
+            関数 <code>delayMessage(message, delay, callback)</code> を作る
+          </li>
+          <li>
+            <code>delay</code> ミリ秒後に
+            <code>callback(message)</code> を呼ぶ（<code>setTimeout</code>
+            を使う）
+          </li>
+          <li>
+            「実行」ボタンを押すと、以下の3つのメッセージが順番に表示されること:
             <ul>
               <li>500ms後：「ステップ1: データを取得しました」</li>
               <li>1000ms後：「ステップ2: データを処理しました」</li>
               <li>1500ms後：「ステップ3: 完了しました！」</li>
             </ul>
           </li>
-          <li>ボタンを押した瞬間に「処理を開始します...」と表示されることも確認する</li>
+          <li>
+            ボタンを押した瞬間に「処理を開始します...」と表示されることも確認する
+          </li>
         </ol>
-        <hr>
+        <hr />
         <div class="demo-area">
           <a class="btn-demo" onclick="run()">実行</a>
           <ul id="log"></ul>

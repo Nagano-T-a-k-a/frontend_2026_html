@@ -2,9 +2,13 @@
 
 const requests = [
   new Promise((resolve) => setTimeout(() => resolve('ニュースA取得'), 300)),
-  new Promise((_, reject) => setTimeout(() => reject(new Error('ニュースBサーバーエラー')), 400)),
+  new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('ニュースBサーバーエラー')), 400),
+  ),
   new Promise((resolve) => setTimeout(() => resolve('ニュースC取得'), 250)),
-  new Promise((_, reject) => setTimeout(() => reject(new Error('ニュースD接続タイムアウト')), 350)),
+  new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('ニュースD接続タイムアウト')), 350),
+  ),
   new Promise((resolve) => setTimeout(() => resolve('ニュースE取得'), 500)),
 ];
 

@@ -45,5 +45,6 @@ function runChallenge() {
 
   // Set で重複を除去し、JSONに変換して表示
   const unique = [...new Set(allSkills)];
-  allSkillsDisplay.textContent = '全スキル（重複なし）: ' + JSON.stringify(unique);
+  allSkillsDisplay.textContent =
+    '全スキル（重複なし）: ' + JSON.stringify(unique);
 }

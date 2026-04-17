@@ -6,7 +6,9 @@ function authenticate(username, password) {
       if (username === 'admin' && password === '1234') {
         resolve({ token: 'abc-xyz-123' });
       } else {
-        reject(new Error('認証失敗：ユーザー名またはパスワードが間違っています'));
+        reject(
+          new Error('認証失敗：ユーザー名またはパスワードが間違っています'),
+        );
       }
     }, 700);
   });

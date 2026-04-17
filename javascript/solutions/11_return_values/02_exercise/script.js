@@ -7,7 +7,7 @@ function addItem(text) {
 
 // 摂氏を1引数に取り、华氏に変換して返す。公式: (℃ × 9 / 5) + 32
 function celsiusToFahrenheit(celsius) {
-  return celsius * 9 / 5 + 32;
+  return (celsius * 9) / 5 + 32;
 }
 
 function run() {

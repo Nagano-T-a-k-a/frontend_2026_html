@@ -10,7 +10,8 @@ function runDemo() {
   list.innerHTML = '';
 
   // JSON.parse の例
-  const jsonString = '{"name":"田中","age":28,"skills":["JavaScript","HTML","CSS"]}';
+  const jsonString =
+    '{"name":"田中","age":28,"skills":["JavaScript","HTML","CSS"]}';
   const obj = JSON.parse(jsonString);
 
   addItem('【JSON.parse の結果】');
