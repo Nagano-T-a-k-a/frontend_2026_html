@@ -14,4 +14,15 @@ function fixCityName() {
    * - 2つを + で連結する
    * =========================================
    */
+
+  const cityName = document.getElementById('city-input').value;
+  const output = document.getElementById('city-output');
+  output.textContent = '';
+
+  const firstChar = cityName[0];
+  const rest = cityName.slice(1);
+
+  const p = document.createElement('p');
+  p.textContent = firstChar.toUpperCase() + rest.toLowerCase();
+  output.appendChild(p);
 }
