@@ -20,4 +20,22 @@ function generateGreeting() {
    * - document.getElementById('input-name').value で値を取得できる
    * =========================================
    */
+
+  const name = document.getElementById('input-name').value;
+  const age = document.getElementById('input-age').value;
+  const place = document.getElementById('input-place').value;
+  const hobby = document.getElementById('input-hobby').value;
+  const output = document.getElementById('greeting-output');
+  output.textContent = '';
+
+  const greeting = `はじめまして！
+私の名前は${name}です。
+年齢は${age}歳で、${place}出身です。
+趣味は${hobby}です。
+よろしくお願いします！
+`;
+
+  const p = document.createElement('p');
+  p.textContent = greeting;
+  output.appendChild(p);
 }
