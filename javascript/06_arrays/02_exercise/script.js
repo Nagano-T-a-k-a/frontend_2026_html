@@ -20,6 +20,24 @@ function addItem() {
    * - shoppingList.length で現在の件数を取得できる
    * =========================================
    */
+
+  const itemInput = document.getElementById('item-input');
+  const item = itemInput.value;
+  const count = document.getElementById('count-display');
+  const output = document.getElementById('shopping-list');
+  
+  if (item === '') return;
+  shoppingList.push(item);
+  
+  output.textContent = '';
+  shoppingList.forEach((v) => {
+    const li = document.createElement('li');
+    li.textContent = v;
+    output.appendChild(li);
+  });
+  
+  count.textContent = `アイテム数: ${shoppingList.length}件`;
+  itemInput.value = '';
 }
 
 function removeLastItem() {
@@ -38,6 +56,13 @@ function removeLastItem() {
    * - ul.lastElementChild.remove() で最後の要素を削除できる
    * =========================================
    */
+  if (shoppingList.length === 0) return;
+
+  shoppingList.pop();
+
+  document.getElementById('shopping-list').lastElementChild.remove();
+
+  document.getElementById('count-display').textContent = `アイテム数: ${shoppingList.length}件`;
 }
 
 function clearItems() {
@@ -54,4 +79,9 @@ function clearItems() {
    * - document.getElementById('shopping-list').innerHTML = '' でリストを空にする
    * =========================================
    */
+  shoppingList = [];
+
+  document.getElementById('shopping-list').innerHTML = '';
+
+  document.getElementById('count-display').textContent = `アイテム数: ${shoppingList.length}件`;
 }
