@@ -15,4 +15,28 @@ function calculate(operator) {
    * - if / else if を使って演算子を判定する
    * =========================================
    */
+  const num1 = Number(document.getElementById('num1').value);
+  const num2 = Number(document.getElementById('num2').value);
+  const result = document.getElementById('result');
+  result.textContent = '';
+
+  let resultText = '';
+  switch (operator) {
+    case '+':
+      resultText = `${num1 + num2}`;
+      break;
+    case '-':
+      resultText = `${num1 - num2}`;
+      break;
+    case '*':
+      resultText = `${num1 * num2}`;
+      break;
+    case '/':
+      resultText = num2 === 0 ? '0で割ることはできません' : `${num1 / num2}`;
+      break;
+  }
+
+  const p = document.createElement('p');
+  p.textContent = resultText;
+  result.appendChild(p);
 }
