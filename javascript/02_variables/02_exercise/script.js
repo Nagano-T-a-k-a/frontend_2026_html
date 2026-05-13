@@ -26,4 +26,17 @@ function showProfile() {
    * - name, age, job それぞれに同じ手順を繰り返す
    * =========================================
    */
+  const name = '田中 太郎';
+  let age = 24;
+  let job = 'エンジニア';
+
+  const p1 = document.createElement('p');
+  p1.textContent = `名前: ${name}`;
+  output.appendChild(p1);
+  const p2 = document.createElement('p');
+  p2.textContent = `年齢: ${age}`;
+  output.appendChild(p2);
+  const p3 = document.createElement('p');
+  p3.textContent = `職業: ${job}`;
+  output.appendChild(p3);
 }
