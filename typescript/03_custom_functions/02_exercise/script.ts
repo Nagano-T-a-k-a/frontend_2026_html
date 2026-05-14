@@ -11,20 +11,24 @@
  * - type は "error" または "success"
  * =====================================
  */
-function addItem(text) {
-  const list = document.getElementById('list');
-  const li = document.createElement('li');
+function addItem(text: string): void {
+  const list = document.getElementById('list') as HTMLUListElement;
+  const li = document.createElement('li') as HTMLLIElement;
 
   li.textContent = text;
   list.appendChild(li);
 }
 
-function showMessage(text, type) {
+function showMessage(text: string, type: 'error' | 'success') {
   // ここに実装
+  if (type === 'error') text += '❌';
+  else if (type === 'success') text += '✅';
+
+  addItem(text);
 }
 
 function run() {
-  const list = document.getElementById('list');
+  const list = document.getElementById('list') as HTMLUListElement;
   list.innerHTML = '';
 
   showMessage('保存できました', 'success');
