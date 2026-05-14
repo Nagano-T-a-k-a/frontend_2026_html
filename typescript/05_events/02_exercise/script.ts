@@ -13,8 +13,9 @@
 let count = 0;
 
 // 要素取得
-const btn = document.getElementById('countBtn');
-const display = document.getElementById('countDisplay');
+const btn = document.getElementById('countBtn') as HTMLAnchorElement;
+const display = document.getElementById('countDisplay') as HTMLParagraphElement;
 
 // イベント追加
 // ここに実装
+btn.addEventListener('click', () => display.textContent = `クリック数: ${++count}`);
