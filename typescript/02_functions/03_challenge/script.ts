@@ -10,20 +10,24 @@
  * - "A" / "B" / "C" / "F" のどれかを返す
  * ================================================
  */
-function addGrade(text) {
-  const list = document.getElementById('grade-list');
+function addGrade(text: string): void {
+  const list = document.getElementById('grade-list') as HTMLUListElement;
   const li = document.createElement('li');
 
   li.textContent = text;
   list.appendChild(li);
 }
 
-function calculateGrade(score) {
+function calculateGrade(score: number): 'A' | 'B' | 'C' | 'F' {
   // ここに実装
+  if (score >= 90) return 'A';
+  else if (score >= 70) return 'B';
+  else if (score >= 50) return 'C';
+  else return 'F';
 }
 
-function runChallenge() {
-  const list = document.getElementById('grade-list');
+function runChallenge(): void {
+  const list = document.getElementById('grade-list') as HTMLUListElement;
   list.innerHTML = '';
 
   const scores = [95, 82, 67, 55, 40];

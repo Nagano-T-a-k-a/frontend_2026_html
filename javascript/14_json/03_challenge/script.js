@@ -30,4 +30,33 @@ function runChallenge() {
    *    const unique = [...new Set(allSkillsArray)];
    * =============================================
    */
+  let employees = JSON.parse(employeesJson);
+  const allSkillsArray = [];
+
+  for (let i = 0; i < employees.length; i++) {
+    const {name, department, skills} = employees[i];
+    const card = document.createElement('div');
+    card.setAttribute('class', 'employee-card');
+
+    const h3 = document.createElement('h3');
+    h3.textContent = name;
+    card.appendChild(h3);
+
+    let p = document.createElement('p');
+    p.textContent = department;
+    card.appendChild(p);
+
+    p = document.createElement('p');
+    p.textContent = skills.join(', ');
+    card.appendChild(p);
+
+    skills.forEach(skill => {
+      allSkillsArray.push(skill);
+    });
+
+    cardsContainer.appendChild(card);
+  }
+
+  const skills = [... new Set(allSkillsArray)];
+  allSkillsDisplay.textContent = JSON.stringify(skills);
 }

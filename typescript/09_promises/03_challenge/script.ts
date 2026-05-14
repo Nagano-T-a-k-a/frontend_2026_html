@@ -2,18 +2,18 @@
 
 // ヒント:
 // token を持つオブジェクト
-// type AuthResponse = ???
+type AuthResponse = {token: string}
 
 // ヒント:
 // name, role, lastLogin を持つ
-// type Profile = ???
+type Profile = {name: string, role: string, lastLogin: string}
 
 // ─── 模擬API（型を付けてください） ───────────────────
 
 function authenticate(
   username: string,
   password: string
-) /* : Promise<AuthResponse> */ {
+) : Promise<AuthResponse> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (username === "admin" && password === "1234") {
@@ -27,7 +27,7 @@ function authenticate(
 
 function fetchProfile(
   token: string
-) /* : Promise<Profile> */ {
+): Promise<Profile> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (token === "abc-xyz-123") {
@@ -84,6 +84,18 @@ async function login(
   logEl.innerHTML = "";
 
   // ここに実装
+  try {
+    const authResponse = await authenticate(username, password);
+
+    const profile = await fetchProfile(authResponse.token);
+
+    addLog('ログイン成功');
+    addLog(`${profile.name}・${profile.role}`);
+  } catch (e) {
+    if (e instanceof Error) {
+      addLog(e.message);
+    }
+  }
 }
 
 // HTMLから呼び出す

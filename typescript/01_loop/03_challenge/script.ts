@@ -9,18 +9,31 @@
  * - list の型
  * - i, j の型
  */
-function addPrime(text) {
-  const list = document.getElementById('prime-list');
+function addPrime(text: number): void {
+  const list = document.getElementById('prime-list') as HTMLUListElement;
   const li = document.createElement('li');
-  li.textContent = text;
+  li.textContent = text.toString();
   list.appendChild(li);
 }
 
-function runBonus() {
-  const list = document.getElementById('prime-list');
+function runBonus(): void {
+  const list = document.getElementById('prime-list') as HTMLUListElement;
   list.innerHTML = '';
 
   // ここに素数ロジックを書く
+  for (let i = 2; i <= 50; i++) {
+    let isPrime = true;
+
+    if (i == 2) addPrime(i);
+    if (i % 2 == 0) continue;
+    for (let j = 3; j * j <= i; j += 2) {
+      if (i % j == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    isPrime && addPrime(i);
+  }
 
   /**
    * =========================================
