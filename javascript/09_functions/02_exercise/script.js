@@ -13,6 +13,7 @@ function addItem(text) {
  * - return: a + b
  * ====================================
  */
+const add = (a, b) => a + b;
 
 function run() {
   const list = document.getElementById('list');
