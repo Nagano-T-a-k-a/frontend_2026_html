@@ -1,12 +1,12 @@
-function addItem(text) {
-  const list = document.getElementById('list');
-  const li = document.createElement('li');
-  li.textContent = text;
+function addItem(text: string | number) {
+  const list = document.getElementById('list') as HTMLUListElement;
+  const li = document.createElement('li') as HTMLLIElement;
+  li.textContent = text.toString();
   list.appendChild(li);
 }
 
-function runLoop() {
-  const list = document.getElementById('list');
+function runLoop(): void {
+  const list = document.getElementById('list') as HTMLUListElement;
 
   // リセット
   list.innerHTML = '';
@@ -25,7 +25,7 @@ function runLoop() {
    * - li の型
    * - i の型
    */
-  for (let i = 1; i <= 20; i++) {
+  for (let i: number = 1; i <= 20; i++) {
     if (i % 15 === 0) {
       addItem('FizzBuzz');
     } else if (i % 3 === 0) {
@@ -48,3 +48,8 @@ function runLoop() {
 
   // addItem(true);
 }
+// HTMLから呼び出すために必要
+(window as any).runLoop = runLoop;
+
+export {};
+
