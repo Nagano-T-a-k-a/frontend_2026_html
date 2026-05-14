@@ -12,3 +12,9 @@
  * - document.getElementById("countBtn").addEventListener("click", ...)
  * =============================================
  */
+let count = 0;
+
+document.getElementById('countBtn').addEventListener('click', () => {
+  const output = document.getElementById('countDisplay');
+  output.textContent = `クリック数: ${++count}`;
+})
