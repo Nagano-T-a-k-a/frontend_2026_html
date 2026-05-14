@@ -1,17 +1,17 @@
-function addItem(text) {
-  const list = document.getElementById('list');
-  const li = document.createElement('li');
+function addItem(text: string) {
+  const list = document.getElementById('list') as HTMLUListElement;
+  const li = document.createElement('li') as HTMLLIElement;
 
   li.textContent = text;
   list.appendChild(li);
 }
 
-function greet(name) {
+function greet(name: string): string {
   return 'こんにちは、' + name + 'さん！';
 }
 
-function runDemo() {
-  const list = document.getElementById('list');
+function runDemo(): void {
+  const list = document.getElementById('list') as HTMLUListElement;
   list.innerHTML = '';
 
   const names = ['太郎', '花子', '健太'];
@@ -32,3 +32,5 @@ function runDemo() {
 
 // HTMLから呼び出すために必要
 (window as any).runDemo = runDemo;
+
+export {};
