@@ -30,4 +30,8 @@ function run() {
    *    「○○: ○○円（在庫なし）」の形式で addItem() に渡す
    * =============================================
    */
+  const data = JSON.parse(jsonData);
+  data.products.forEach(product => {
+    addItem(`${product.name}: ${product.price}円（${product.inStock ? '在庫:あり' : '在庫なし'}）`)
+  });
 }
