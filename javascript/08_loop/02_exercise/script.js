@@ -24,4 +24,13 @@ function runLoop() {
    * - %（余り）を使う
    * =========================================
    */
+  for (let i = 1; i <= 20; i++) {
+    let text = '';
+    if (i % 15 === 0) text = 'FizzBuzz';
+    else if (i % 3 === 0) text = 'Fizz';
+    else if (i % 5 === 0) text = 'Buzz';
+    else text = String(i);
+
+    addItem(text);
+  }
 }
