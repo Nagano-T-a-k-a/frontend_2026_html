@@ -15,12 +15,15 @@ function addLog(text: string): void {
  * - data: string[] | null
  * =============================================
  */
-// type ApiResponse = ???
+type ApiResponse = {
+  status: 'ok' | 'error',
+  data: string[] | null
+}
 
 /**
  * 模擬APIリクエスト（型を付けてください）
  */
-function mockFetch(url: string) /* : Promise<ApiResponse> */ {
+function mockFetch(url: string): Promise<ApiResponse> {
   return new Promise((resolve) => {
     setTimeout(() => {
       if (url.includes('error')) {
@@ -56,6 +59,17 @@ function run(url: string): void {
    *    - addLog("エラー発生: " + err.message)
    * =============================================
    */
+  mockFetch(url)
+    .then((response) => {
+      if (response.status !== 'ok') throw new Error('取得失敗');
+      return response.data;
+    })
+    .then((data) => {
+      addLog("取得成功: " + data!.length + "件");
+    })
+    .catch((err: Error) => {
+      addLog("エラー発生: " + err.message);
+    })
 }
 
 // HTMLから呼び出すため
